@@ -89,6 +89,55 @@
 		$link.find('label').toggleClass('active');
 	}
 
+	var click_client_code_verification = function(event) {
+    console.log('calling listener and checking array state.');
+
+    if(window.click.shopCodes === undefined || window.click.shopCodes.length === 0) {
+      console.log('filling array.');
+      click_retreive_shop_codes();
+    }
+    
+    let typedCode = event.currentTarget.value;
+    let typedCodeHashed = md5(typedCode);
+    if(window.click.shopCodes.includes(typedCodeHashed)) {
+      $(event.currentTarget).siblings('input[type="submit"]').prop('disabled', false);
+    }
+    else {
+      $(event.currentTarget).siblings('input[type="submit"]').prop('disabled', true);
+    }
+  }
+
+  var click_retreive_shop_codes = function() {
+    $.ajax({
+      url : ajax_params.ajax_url,
+      type : 'post',
+      async: false,
+      data : {
+        action : 'get_shop_codes_array',
+      },
+      success : function( response ) {
+        let data = JSON.parse(response);
+        console.log('response : ' + data);
+        let shopCodesTemp = [];
+        
+        Object.keys(data).forEach(function(key) {
+          shopCodesTemp.push(data[key]['code'])
+        });
+
+        webStateWaiting(false);
+        window.click.shopCodes = shopCodesTemp;
+      },
+      error : function ( response ) {
+        //$('').html('<p></p>');
+        console.log(response);
+      },
+      beforeSend: function() {
+        webStateWaiting(true);
+        return true;
+      },
+    });
+	}
+	
 	/**************************** Helper funcitons ********************************/
   var isMobile = function(){
     return $(window).width() <= 1023;
@@ -171,6 +220,13 @@
 			$('.edgtf-tc-nav-prev .edgtf-nav-label').html('ATRAS');
 			$('.edgtf-tc-nav-next .edgtf-nav-label').html('ADELANTE');
 		}
+
+		//Main shop page
+		if($('.page-id-5065').length > 0) { // CHANGE ON LIVE
+      console.log('entering ready function and creating array');
+      window.click = {shopCodes : []};
+      $('.edgtf-content .shop-code-section input[name="shop_code"]').on('change onkeyup paste input', click_client_code_verification);
+    }
 
   });
 })(jQuery);

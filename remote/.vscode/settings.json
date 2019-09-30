@@ -14,9 +14,6 @@
                 "exclude": [
                     "**/!(wp-config).php",
                     "**/!(debug).log",
-                    "wp-content/plugins/!(click)/**/*.php",
-                    "wp-content/plugins/!(click)/**/*.css",
-                    "wp-content/plugins/!(click)/**/*.js",
                 ],
 
                 "deployOnSave": [ "clickWebpage" ],

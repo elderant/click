@@ -69,17 +69,7 @@ define('FS_METHOD','direct');
 
 define('FS_CHMOD_DIR', (0775 & ~ umask()));
 define('FS_CHMOD_FILE', (0664 & ~ umask()));
-/**
- * For developers: WordPress debugging mode.
- *
- * Change this to true to enable the display of notices during development.
- * It is strongly recommended that plugin and theme developers use WP_DEBUG
- * in their development environments.
- */
-//define('WP_DEBUG', false);
-define( 'WP_DEBUG', true );
-define( 'WP_DEBUG_DISPLAY', false);
-define( 'WP_DEBUG_LOG', true );
+
 
 define('AUTH_KEY', 'put your unique phrase here');
 define('SECURE_AUTH_KEY', 'put your unique phrase here');
@@ -89,10 +79,21 @@ define('AUTH_SALT', 'put your unique phrase here');
 define('SECURE_AUTH_SALT', 'put your unique phrase here');
 define('LOGGED_IN_SALT', 'put your unique phrase here');
 define('NONCE_SALT', 'put your unique phrase here');
+
+/**
+ * For developers: WordPress debugging mode.
+ *
+ * Change this to true to enable the display of notices during development.
+ * It is strongly recommended that plugin and theme developers use WP_DEBUG
+ * in their development environments.
+ */
+//define('WP_DEBUG', false);
+define('WP_DEBUG', true );
 define('WP_DEBUG_DISPLAY', false);
 define('WP_DEBUG_LOG', true);
-define('WP_MEMORY_LIMIT', '64M');
 
+
+define('WP_MEMORY_LIMIT', '64M');
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
@@ -101,4 +102,5 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+//ini_set('session.save_path', './public_html/sessions/');
 
