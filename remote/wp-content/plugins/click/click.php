@@ -81,28 +81,6 @@ function click_file_build_path($plugin, $template_folder, $folder, $filename) {
           $filename;
 }
 
-//add_action('init', 'start_session', 1);
-
-function start_session() {
-	error_log('session id on init call : ' . print_r(session_id(),1));
-	error_log('$_session id on init call : ' . print_r($_SESSION,1));
-	if(!session_id()) {
-		$value = session_start();
-		$_SESSION['test'] = 1;
-		
-		// error_log('session id : ' . print_r(session_id(),1));
-		// error_log('session return : ' . print_r($value,1));
-		error_log('initializing session');
-	}
-}
-
-// add_action('wp_logout','end_session');
-// add_action('wp_login','end_session');
-
-function end_session() {
-	session_destroy();
-}
-
 /************************************************************/
 /************************ Educacion *************************/
 /************************************************************/
@@ -192,8 +170,6 @@ function click_educacion_get_category_html_args($term_id, $all_term = false) {
 		array_unshift($child_categories, $all_term_object);
 	}
 
-	error_log(print_r($child_categories,1));
-
 	$args = (object)[
 		'child_categories' => $child_categories,
 		'main_list' => $main_list,
@@ -218,7 +194,6 @@ add_action( 'admin_post_access_discount_shop', 'access_discount_shop_handler' );
 
 function access_discount_shop_handler () {
 	if ( isset( $_POST['action'] ) && strcasecmp($_POST['action'], 'access_discount_shop') == 0 ) {
-		error_log('Storing code in cookie');
 
 		setcookie( 'shop_code', md5($_POST['shop_code']), 1 * DAYS_IN_SECONDS, COOKIEPATH, COOKIE_DOMAIN );
 		//$_SESSION['shopCode'] = md5($_POST['shop_code']);
@@ -287,6 +262,49 @@ function click_get_shop_codes_array() {
 	die();
 }
 
+add_filter('woocommerce_single_product_image_thumbnail_html', 'click_single_product_image_thumbnail_html', 10, 2);
+function click_single_product_image_thumbnail_html($sprintf, $attachment_id) {
+	return wc_get_gallery_image_html( $attachment_id, TRUE );
+}
+
+add_action('woocommerce_after_shop_loop_item', 'click_after_shop_loop_item', 5);
+function click_after_shop_loop_item() {
+	global $wp_query;
+	global $product;
+	$args = [];
+	error_log('calling button loop for product : ' . $product -> get_id());
+
+	$args['url'] = get_permalink( $product -> get_id() );
+	$args['class'] = ['button', 'product_type_' . $product->get_type(), 'view-product'];
+	$args['attributes'] = array(
+		'data-product_id'  => $product->get_id(),
+		'data-product_sku' => $product->get_sku(),
+		'aria-label'       => $product->add_to_cart_description(),
+		'rel'              => 'nofollow',
+	);
+	
+	$wp_query -> query_vars['click_args'] = $args;
+
+	$template_url = click_load_template('view-product.php', 'shop');
+	load_template($template_url, FALSE);
+}
+
+/************************************************************/
+/******************* Shop single functions ******************/
+/************************************************************/
+
+add_action('woocommerce_after_single_product_summary', 'click_remove_related_products', 1);
+function click_remove_related_products() {
+	remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+}
+
+add_action('woocommerce_after_single_product', 'click_add_back_to_shop', 99);
+
+function click_add_back_to_shop() {
+	$template_url = click_load_template('back-to-shop.php', 'shop-single');
+	load_template($template_url, FALSE);
+}
+
 /************************************************************/
 /********************* Checkout functions *******************/
 /************************************************************/
@@ -294,7 +312,6 @@ function click_get_shop_codes_array() {
 function click_get_student_product_in_cart() {
 	global $woocommerce;
 
-	error_log('checking if ther is a student product in cart');
 	$args = array(
 		'post_type' => 'product',
 		'posts_per_page' => -1,
@@ -314,12 +331,10 @@ function click_get_student_product_in_cart() {
 	foreach($_cart as $product_array) {
 		if(in_array($product_array['product_id'], $student_products->get_posts())){
 			$student_product_in_cart = TRUE;
-			// $_SESSION['student_product_in_cart'] = TRUE;
 			break;
 		}
 	}
-	//setcookie( 'student_product_in_cart', $student_product_in_cart, 1 * DAYS_IN_SECONDS, COOKIEPATH, COOKIE_DOMAIN );
-	//error_log(print_r($student_products->get_posts(),1));
+	
 	return $student_product_in_cart;
 }
 
@@ -327,7 +342,6 @@ function click_checkout_student_fields( $checkout ) {
 	global $woocommerce;
 
 	$student_product_in_cart = click_get_student_product_in_cart();
-	error_log(print_r($student_product_in_cart,1));
 	if($student_product_in_cart) {
 		echo '<div id="custom_checkout_field"><h3>' . __('Campos del estudiante') . '</h3>';
 		woocommerce_form_field( 'order_school', array(
