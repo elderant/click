@@ -222,11 +222,22 @@
 		}
 
 		//Main shop page
-		if($('.page-id-5065').length > 0) { // CHANGE ON LIVE
-      console.log('entering ready function and creating array');
+		if($('.page-id-5065').length > 0) {
+      //console.log('entering ready function and creating array');
       window.click = {shopCodes : []};
       $('.edgtf-content .shop-code-section input[name="shop_code"]').on('change onkeyup paste input', click_client_code_verification);
     }
+
+		if($('.woocommerce-checkout').length > 0) {
+			$('form.checkout').on('change', 'input[name^="shipping_method"]', function() {
+				if($(this).val() == 'flat_rate:9') {
+					$('#customer_details .woocommerce-billing-fields #custom_checkout_field').removeClass('hidden');
+				}
+				else {
+					$('#customer_details .woocommerce-billing-fields #custom_checkout_field').addClass('hidden');
+				}
+			});
+		}
 
   });
 })(jQuery);

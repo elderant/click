@@ -22,7 +22,9 @@
 :root {
   --primary-orange: #fab401;
   --primary-blue: #3d4596;
+  --primary-gray: #404040;
   --secondary-gray: #8d8d8d;
+  --border-gray: #d4d4d4;
   --primary-black: #202020;
   --button-black: #333;
   --primary-green: #10c9c3;
@@ -45,6 +47,21 @@
 
 .bold {
   font-weight: 700;
+}
+
+body,
+body.home,
+body.single,
+body.woocommerce-page {
+  color: var(--primary-gray);
+}
+
+body.woocommerce-page .edgtf-content input[type=text], 
+body.woocommerce-page .edgtf-content input[type=email], 
+body.woocommerce-page .edgtf-content input[type=tel], 
+body.woocommerce-page .edgtf-content input[type=password], 
+body.woocommerce-page .edgtf-content textarea {
+  color: var(--primary-gray);
 }
 
 /******************** Template default css ********************/
@@ -175,6 +192,10 @@ header.edgtf-page-header .edgtf-shopping-cart-holder .edgtf-cart-text i {
 .page-id-3566 .edgtf-full-width .edgtf-team-carousel-holder .edgtf-tc-nav >.edgtf-tc-nav-next {
   padding: 0;
   right: 5%;
+}
+
+.page-id-3566 .edgtf-testimonials-holder .edgtf-testimonials.edgtf-testimonials-carousel .edgtf-testimonial-bottom .edgtf-testimonial-author .edgtf-testimonial-author-text {
+  color: var(--primary-gray);
 }
 
 @media (min-width : 1441px) {
@@ -785,4 +806,21 @@ header.edgtf-page-header .edgtf-shopping-cart-holder .edgtf-cart-text i {
 
 .single-product .back-to-shop.section .button:hover {
   background-color: var(--primary-green);
+}
+
+/* cart / checkout */
+body.woocommerce-page table.cart tr.cart_item td.product-remove a {
+  color: var(--primary-gray);
+}
+
+body.woocommerce-page table.cart tr.cart_item td.product-remove a:hover {
+  color: var(--primary-green);
+}
+
+.woocommerce-checkout .shop_table .shipping li label[for="shipping_method_0_flat_rate9"] .amount {
+  display: none;
+}
+
+.woocommerce-checkout .shop_table .shipping li label .amount {
+  display: inline-block;
 }

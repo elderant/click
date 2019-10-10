@@ -11,6 +11,7 @@ include( plugin_dir_path( __FILE__ ) . 'includes/admin.php' );
 // Script hooks.
 add_action( 'wp_enqueue_scripts', 'click_scripts' );
 //add_action( 'admin_enqueue_scripts', 'click_admin_scripts' );
+add_filter( 'wc_get_template', 'click_wc_get_template', 11, 5 );
 
 function click_scripts () {
 	wp_enqueue_script ( 'click-js', plugins_url('/js/main.js', __FILE__), array('jquery'),  rand(111,9999), 'all' );
@@ -79,6 +80,16 @@ function click_file_build_path($plugin, $template_folder, $folder, $filename) {
           $template_folder . DIRECTORY_SEPARATOR .
           $folder . DIRECTORY_SEPARATOR .
           $filename;
+}
+
+function click_wc_get_template( $located, $template_name, $args, $template_path, $default_path ) {
+	$plugin_template_path = untrailingslashit( plugin_dir_path( __FILE__ ) ) . '/templates/woocommerce/' . $template_name;
+
+	if ( file_exists( $plugin_template_path ) ) {
+		$located = $plugin_template_path;
+	}
+
+	return $located;
 }
 
 /************************************************************/
@@ -209,6 +220,7 @@ function click_check_shop_code() {
 	global $wp_query;
 	global $post;
 	
+	//error_log('Calling click get post : ' . print_r($wp_query,1));
   if(sizeOf($wp_query -> get_posts()) > 0 ) {
     if($wp_query -> get_posts()[0] -> ID == 5070) {
 			$shop_codes = get_option( 'shop_codes', array() );
@@ -343,7 +355,7 @@ function click_checkout_student_fields( $checkout ) {
 
 	$student_product_in_cart = click_get_student_product_in_cart();
 	if($student_product_in_cart) {
-		echo '<div id="custom_checkout_field"><h3>' . __('Campos del estudiante') . '</h3>';
+		echo '<div id="custom_checkout_field" class="hidden"><h3>' . __('Campos del estudiante') . '</h3>';
 		woocommerce_form_field( 'order_school', array(
 			'type'          => 'text',
 			'class'         => array('school-definition-field form-row-wide'),
@@ -370,7 +382,7 @@ function click_checkout_student_fields( $checkout ) {
 		echo '</div>';
 	}
 }
-add_action( 'woocommerce_after_order_notes', 'click_checkout_student_fields' );
+add_action( 'woocommerce_after_checkout_billing_form', 'click_checkout_student_fields', 20, 1 );
 
 /**
  * Process the checkout
@@ -378,17 +390,20 @@ add_action( 'woocommerce_after_order_notes', 'click_checkout_student_fields' );
 function click_checkout_validate_student_fields() {
 	// Check if set, if its not set add an error.
 	$student_product_in_cart = click_get_student_product_in_cart();
-	if($student_product_in_cart) {
+	if($student_product_in_cart && isset($_POST['shipping_method'][0]) && $_POST['shipping_method'][0] == 'flat_rate:9') {
 		if ( ! $_POST['order_school'] ) {
-			wc_add_notice( __( 'El nombre del colegio es un campo requerido.' ), 'error' );
+			$string = sprintf( wp_kses( __( '<strong>El nombre del colegio</strong> es un campo requerido.', 'click' ) ));
+			wc_add_notice( $string, 'error' );
 		}
 		
 		if ( ! $_POST['order_room'] ) {
-			wc_add_notice( __( 'El número del salón es un campo requerido.' ), 'error' );
+			$string = sprintf( wp_kses( __( '<strong>El número del salón</strong> es un campo requerido.', 'click' ) ));
+			wc_add_notice( $string, 'error' );
 		}
 
 		if ( ! $_POST['order_student'] ) {
-			wc_add_notice( __( 'El nombre del estudiante es un campo requerido.' ), 'error' );
+			$string = sprintf( wp_kses( __( '<strong>El nombre del estudiante</strong> es un campo requerido.', 'click' ) ));
+			wc_add_notice( $string, 'error' );
 		}
 	}
 }
@@ -426,6 +441,12 @@ function click_hide_salon_shipping_method( $rates ) {
 	return $rates;
 }
 add_filter( 'woocommerce_package_rates', 'click_hide_salon_shipping_method', 100 );
+
+add_action( 'woocommerce_checkout_order_review', 'click_checkout_fields', 15 );
+function click_checkout_fields() {
+	$template_url = click_load_template('checkout-fields.php', 'checkout');
+	load_template($template_url, true);
+}
 
 /************************************************************/
 /*********************** Admin functions ********************/
