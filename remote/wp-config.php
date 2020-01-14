@@ -87,10 +87,10 @@ define('NONCE_SALT', 'put your unique phrase here');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-//define('WP_DEBUG', false);
-define('WP_DEBUG', true );
-define('WP_DEBUG_DISPLAY', false);
-define('WP_DEBUG_LOG', true);
+define('WP_DEBUG', false);
+// define('WP_DEBUG', true );
+// define('WP_DEBUG_DISPLAY', false);
+// define('WP_DEBUG_LOG', true);
 
 
 define('WP_MEMORY_LIMIT', '64M');

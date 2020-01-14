@@ -90,10 +90,7 @@
 	}
 
 	var click_client_code_verification = function(event) {
-    console.log('calling listener and checking array state.');
-
     if(window.click.shopCodes === undefined || window.click.shopCodes.length === 0) {
-      console.log('filling array.');
       click_retreive_shop_codes();
     }
     
@@ -117,7 +114,6 @@
       },
       success : function( response ) {
         let data = JSON.parse(response);
-        console.log('response : ' + data);
         let shopCodesTemp = [];
         
         Object.keys(data).forEach(function(key) {

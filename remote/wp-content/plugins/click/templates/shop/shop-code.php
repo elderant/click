@@ -3,10 +3,9 @@
     <div>
       <h5>
         <span class="">
-          Inserte el codigo de la tienda 
+          Inserte el código para acceder a la tienda de listas escolares.
         </span>
-        <span class="">para ir a la seccion de padres.</span>
-        </h5>
+      </h5>
     </div>
     <div class="code-insert">
     <?php access_discount_shop_handler();?>

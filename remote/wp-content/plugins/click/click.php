@@ -209,7 +209,7 @@ function access_discount_shop_handler () {
 		setcookie( 'shop_code', md5($_POST['shop_code']), 1 * DAYS_IN_SECONDS, COOKIEPATH, COOKIE_DOMAIN );
 		//$_SESSION['shopCode'] = md5($_POST['shop_code']);
 		
-    wp_redirect('/shop2/'); // CHANGE ON LIVE
+    wp_redirect('/tienda_escolar/'); // CHANGE ON LIVE
     exit;
 	}
 }
@@ -227,7 +227,7 @@ function click_check_shop_code() {
 			
 			//$code_used = $_SESSION['shopCode'];
 			if(!isset($_COOKIE['shop_code'])) {
-				wp_redirect('/shop3/');
+				wp_redirect('/tienda/');
 			}
 			$code_used = $_COOKIE['shop_code'];
 
@@ -240,7 +240,7 @@ function click_check_shop_code() {
 			}
 
 			if(!$valid_code) {
-				wp_redirect('/shop3/'); // CHANGE ON LIVE
+				wp_redirect('/tienda/'); // CHANGE ON LIVE
 			}
 		}
 		elseif($wp_query -> get_posts()[0] -> ID == 5065){
@@ -259,7 +259,7 @@ function click_check_shop_code() {
 			}
 
 			if($valid_code) {
-				wp_redirect('/shop2/'); // CHANGE ON LIVE
+				wp_redirect('/tienda_escolar/'); // CHANGE ON LIVE
 			}
 		}
 	}
@@ -284,7 +284,6 @@ function click_after_shop_loop_item() {
 	global $wp_query;
 	global $product;
 	$args = [];
-	error_log('calling button loop for product : ' . $product -> get_id());
 
 	$args['url'] = get_permalink( $product -> get_id() );
 	$args['class'] = ['button', 'product_type_' . $product->get_type(), 'view-product'];
@@ -435,9 +434,8 @@ add_action( 'woocommerce_checkout_update_order_meta', 'click_order_student_field
 function click_hide_salon_shipping_method( $rates ) {
 	$student_product_in_cart = click_get_student_product_in_cart();
 	if(!$student_product_in_cart) {
-		unset($rates['free_shipping:2']);
+		unset($rates['flat_rate:9']);
 	}
-
 	return $rates;
 }
 add_filter( 'woocommerce_package_rates', 'click_hide_salon_shipping_method', 100 );
@@ -446,6 +444,46 @@ add_action( 'woocommerce_checkout_order_review', 'click_checkout_fields', 15 );
 function click_checkout_fields() {
 	$template_url = click_load_template('checkout-fields.php', 'checkout');
 	load_template($template_url, true);
+}
+
+add_filter('woocommerce_checkout_fields', 'click_change_checkout_fields', 10, 1);
+function click_change_checkout_fields($fields) {
+	$fields2['billing']['billing_first_name'] = $fields['billing']['billing_first_name'];
+	$fields2['billing']['billing_last_name'] = $fields['billing']['billing_last_name'];
+	$fields2['billing']['billing_country'] = $fields['billing']['billing_country'];
+	$fields2['billing']['billing_state'] = $fields['billing']['billing_state'];
+	$fields2['billing']['billing_city'] = $fields['billing']['billing_city'];
+	$fields2['billing']['billing_address_1'] = $fields['billing']['billing_address_1'];
+	$fields2['billing']['billing_address_2'] = $fields['billing']['billing_address_2'];
+	$fields2['billing']['billing_postcode'] = $fields['billing']['billing_postcode'];
+	$fields2['billing']['billing_email'] = $fields['billing']['billing_email'];
+	$fields2['billing']['billing_phone'] = $fields['billing']['billing_phone'];
+
+	$fields2['shipping']['shipping_first_name'] = $fields['shipping']['shipping_first_name'];
+	$fields2['shipping']['shipping_last_name'] = $fields['shipping']['shipping_last_name'];
+	$fields2['shipping']['shipping_country'] = $fields['shipping']['shipping_country'];
+	$fields2['shipping']['shipping_state'] = $fields['shipping']['shipping_state'];
+	$fields2['shipping']['shipping_city'] = $fields['shipping']['shipping_city'];
+	$fields2['shipping']['shipping_address_1'] = $fields['shipping']['shipping_address_1'];
+	$fields2['shipping']['shipping_address_2'] = $fields['shipping']['shipping_address_2'];
+	$fields2['shipping']['shipping_postcode'] = $fields['shipping']['shipping_postcode'];
+
+	$fields2['billing']['billing_state']['label'] = __('Departamento', 'click');
+	$fields2['billing']['billing_city']['label'] = __('Ciudad', 'click');
+	$fields2['shipping']['shipping_state']['label'] = __('Departamento', 'click');
+	$fields2['shipping']['shipping_city']['label'] = __('Ciudad', 'click');
+
+	$fields['billing']['billing_state']['priority'] = 50;
+	$fields['billing']['billing_city']['priority'] = 60;
+	$fields['billing']['billing_address_1']['priority'] = 70;
+	$fields['billing']['billing_address_2']['priority'] = 80;
+
+	$fields['shipping']['shipping_state']['priority'] = 50;
+	$fields['shipping']['shipping_city']['priority'] = 60;
+	$fields['shipping']['shipping_address_1']['priority'] = 70;
+	$fields['shipping']['shipping_address_2']['priority'] = 80;
+
+	return $fields2;
 }
 
 /************************************************************/

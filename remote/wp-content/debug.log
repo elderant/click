@@ -1,0 +1,1047 @@
+[21-Oct-2019 14:59:22 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 14:59:22 UTC] PHP Notice:  WC_Product::get_price_excluding_tax ha quedado <strong>obsoleto</strong> desde la versión 3.0. Utiliza wc_get_price_excluding_tax en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 14:59:22 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 14:59:22 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 14:59:22 UTC] PHP Notice:  WC_Cart::get_checkout_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_checkout_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 14:59:22 UTC] PHP Notice:  Undefined index: shipping_email in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-content/plugins/click/click.php on line 472
+[21-Oct-2019 14:59:22 UTC] PHP Notice:  Undefined index: shipping_phone in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-content/plugins/click/click.php on line 473
+[21-Oct-2019 14:59:22 UTC] PHP Notice:  Undefined index: order in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-content/plugins/woocommerce/includes/class-wc-checkout.php on line 198
+[21-Oct-2019 14:59:22 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-content/plugins/woocommerce/templates/checkout/form-shipping.php on line 68
+[21-Oct-2019 15:01:59 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:01:59 UTC] PHP Notice:  WC_Product::get_price_excluding_tax ha quedado <strong>obsoleto</strong> desde la versión 3.0. Utiliza wc_get_price_excluding_tax en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:01:59 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:01:59 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:01:59 UTC] PHP Notice:  WC_Cart::get_checkout_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_checkout_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:01:59 UTC] Array
+(
+    [billing] => Array
+        (
+            [billing_first_name] => Array
+                (
+                    [label] => Nombre
+                    [required] => 1
+                    [class] => Array
+                        (
+                            [0] => form-row-first
+                        )
+
+                    [autocomplete] => given-name
+                    [priority] => 10
+                )
+
+            [billing_last_name] => Array
+                (
+                    [label] => Apellidos
+                    [required] => 1
+                    [class] => Array
+                        (
+                            [0] => form-row-last
+                        )
+
+                    [autocomplete] => family-name
+                    [priority] => 20
+                )
+
+            [billing_country] => Array
+                (
+                    [type] => country
+                    [label] => País
+                    [required] => 1
+                    [class] => Array
+                        (
+                            [0] => form-row-wide
+                            [1] => address-field
+                            [2] => update_totals_on_change
+                        )
+
+                    [autocomplete] => country
+                    [priority] => 40
+                )
+
+            [billing_address_1] => Array
+                (
+                    [label] => Dirección de la calle
+                    [placeholder] => Número de la casa y nombre de la calle
+                    [required] => 1
+                    [class] => Array
+                        (
+                            [0] => form-row-wide
+                            [1] => address-field
+                        )
+
+                    [autocomplete] => address-line1
+                    [priority] => 50
+                )
+
+            [billing_address_2] => Array
+                (
+                    [label] => Apartment, suite, or unit.
+                    [label_class] => screen-reader-text
+                    [placeholder] => Apartamento, habitación, etc. (opcional)
+                    [class] => Array
+                        (
+                            [0] => form-row-wide
+                            [1] => address-field
+                        )
+
+                    [autocomplete] => address-line2
+                    [priority] => 60
+                    [required] => 
+                )
+
+            [billing_city] => Array
+                (
+                    [label] => Localidad / Ciudad
+                    [required] => 1
+                    [class] => Array
+                        (
+                            [0] => form-row-wide
+                            [1] => address-field
+                        )
+
+                    [autocomplete] => address-level2
+                    [priority] => 80
+                    [type] => city
+                )
+
+            [billing_state] => Array
+                (
+                    [type] => state
+                    [label] => Región / Provincia
+                    [required] => 1
+                    [class] => Array
+                        (
+                            [0] => form-row-wide
+                            [1] => address-field
+                        )
+
+                    [validate] => Array
+                        (
+                            [0] => state
+                        )
+
+                    [autocomplete] => address-level1
+                    [priority] => 70
+                    [country_field] => billing_country
+                )
+
+            [billing_postcode] => Array
+                (
+                    [label] => Código postal
+                    [required] => 
+                    [class] => Array
+                        (
+                            [0] => form-row-wide
+                            [1] => address-field
+                        )
+
+                    [validate] => Array
+                        (
+                            [0] => postcode
+                        )
+
+                    [autocomplete] => postal-code
+                    [priority] => 90
+                )
+
+            [billing_phone] => Array
+                (
+                    [label] => Teléfono
+                    [required] => 1
+                    [type] => tel
+                    [class] => Array
+                        (
+                            [0] => form-row-wide
+                        )
+
+                    [validate] => Array
+                        (
+                            [0] => phone
+                        )
+
+                    [autocomplete] => tel
+                    [priority] => 100
+                )
+
+            [billing_email] => Array
+                (
+                    [label] => Correo electrónico
+                    [required] => 1
+                    [type] => email
+                    [class] => Array
+                        (
+                            [0] => form-row-wide
+                        )
+
+                    [validate] => Array
+                        (
+                            [0] => email
+                        )
+
+                    [autocomplete] => email
+                    [priority] => 110
+                )
+
+        )
+
+    [shipping] => Array
+        (
+            [shipping_first_name] => Array
+                (
+                    [label] => Nombre
+                    [required] => 1
+                    [class] => Array
+                        (
+                            [0] => form-row-first
+                        )
+
+                    [autocomplete] => given-name
+                    [priority] => 10
+                )
+
+            [shipping_last_name] => Array
+                (
+                    [label] => Apellidos
+                    [required] => 1
+                    [class] => Array
+                        (
+                            [0] => form-row-last
+                        )
+
+                    [autocomplete] => family-name
+                    [priority] => 20
+                )
+
+            [shipping_country] => Array
+                (
+                    [type] => country
+                    [label] => País
+                    [required] => 1
+                    [class] => Array
+                        (
+                            [0] => form-row-wide
+                            [1] => address-field
+                            [2] => update_totals_on_change
+                        )
+
+                    [autocomplete] => country
+                    [priority] => 40
+                )
+
+            [shipping_address_1] => Array
+                (
+                    [label] => Dirección de la calle
+                    [placeholder] => Número de la casa y nombre de la calle
+                    [required] => 1
+                    [class] => Array
+                        (
+                            [0] => form-row-wide
+                            [1] => address-field
+                        )
+
+                    [autocomplete] => address-line1
+                    [priority] => 50
+                )
+
+            [shipping_address_2] => Array
+                (
+                    [label] => Apartment, suite, or unit.
+                    [label_class] => screen-reader-text
+                    [placeholder] => Apartamento, habitación, etc. (opcional)
+                    [class] => Array
+                        (
+                            [0] => form-row-wide
+                            [1] => address-field
+                        )
+
+                    [autocomplete] => address-line2
+                    [priority] => 60
+                    [required] => 
+                )
+
+            [shipping_city] => Array
+                (
+                    [label] => Localidad / Ciudad
+                    [required] => 1
+                    [class] => Array
+                        (
+                            [0] => form-row-wide
+                            [1] => address-field
+                        )
+
+                    [autocomplete] => address-level2
+                    [priority] => 80
+                    [type] => city
+                )
+
+            [shipping_state] => Array
+                (
+                    [type] => state
+                    [label] => Región / Provincia
+                    [required] => 1
+                    [class] => Array
+                        (
+                            [0] => form-row-wide
+                            [1] => address-field
+                        )
+
+                    [validate] => Array
+                        (
+                            [0] => state
+                        )
+
+                    [autocomplete] => address-level1
+                    [priority] => 70
+                    [country_field] => shipping_country
+                )
+
+            [shipping_postcode] => Array
+                (
+                    [label] => Código postal
+                    [required] => 
+                    [class] => Array
+                        (
+                            [0] => form-row-wide
+                            [1] => address-field
+                        )
+
+                    [validate] => Array
+                        (
+                            [0] => postcode
+                        )
+
+                    [autocomplete] => postal-code
+                    [priority] => 90
+                )
+
+        )
+
+    [account] => Array
+        (
+            [account_username] => Array
+                (
+                    [type] => text
+                    [label] => Nombre de usuario
+                    [required] => 1
+                    [placeholder] => Nombre de usuario
+                )
+
+            [account_password] => Array
+                (
+                    [type] => password
+                    [label] => Crear una contraseña para la cuenta
+                    [required] => 1
+                    [placeholder] => Contraseña
+                )
+
+        )
+
+    [order] => Array
+        (
+            [order_comments] => Array
+                (
+                    [type] => textarea
+                    [class] => Array
+                        (
+                            [0] => notes
+                        )
+
+                    [label] => Notas del pedido
+                    [placeholder] => Notas sobre tu pedido, por ejemplo, notas especiales para la entrega.
+                )
+
+        )
+
+)
+
+[21-Oct-2019 15:01:59 UTC] PHP Notice:  Undefined index: shipping_email in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-content/plugins/click/click.php on line 473
+[21-Oct-2019 15:01:59 UTC] PHP Notice:  Undefined index: shipping_phone in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-content/plugins/click/click.php on line 474
+[21-Oct-2019 15:01:59 UTC] PHP Notice:  Undefined index: order in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-content/plugins/woocommerce/includes/class-wc-checkout.php on line 198
+[21-Oct-2019 15:01:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-content/plugins/woocommerce/templates/checkout/form-shipping.php on line 68
+[21-Oct-2019 15:03:14 UTC] Array
+(
+    [free_shipping:10] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => free_shipping:10
+                    [method_id] => free_shipping
+                    [instance_id] => 10
+                    [label] => Recoger en tienda (Cra 16#85-15 oficina 301)
+                    [cost] => 0
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 2
+                )
+
+        )
+
+    [flat_rate:9] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => flat_rate:9
+                    [method_id] => flat_rate
+                    [instance_id] => 9
+                    [label] => Envío al colegio
+                    [cost] => 0
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 2
+                )
+
+        )
+
+    [filters_by_cities_shipping_method] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => filters_by_cities_shipping_method
+                    [method_id] => filters_by_cities_shipping_method
+                    [instance_id] => 7
+                    [label] => Envío en Bógota
+                    [cost] => 7000
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 2
+                )
+
+        )
+
+    [flat_rate:8] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => flat_rate:8
+                    [method_id] => flat_rate
+                    [instance_id] => 8
+                    [label] => Nacional
+                    [cost] => 12000
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 2
+                )
+
+        )
+
+)
+
+[21-Oct-2019 15:03:15 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:03:15 UTC] PHP Notice:  WC_Product::get_price_excluding_tax ha quedado <strong>obsoleto</strong> desde la versión 3.0. Utiliza wc_get_price_excluding_tax en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:03:15 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:03:15 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:03:15 UTC] PHP Notice:  WC_Cart::get_checkout_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_checkout_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:03:16 UTC] PHP Notice:  WC_Cart::get_item_data ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_formatted_cart_item_data en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:03:16 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:03:18 UTC] add_to_cart_fragments is deprecated since version 3.0.0! Use woocommerce_add_to_cart_fragments instead.
+[21-Oct-2019 15:03:18 UTC] The WC_Cart::get_cart_url function is deprecated since version 2.5. Replace with wc_get_cart_url.
+[21-Oct-2019 15:03:18 UTC] The WC_Product::get_price_excluding_tax function is deprecated since version 3.0. Replace with wc_get_price_excluding_tax.
+[21-Oct-2019 15:03:18 UTC] The WC_Cart::get_remove_url function is deprecated since version 3.3. Replace with wc_get_cart_remove_url.
+[21-Oct-2019 15:03:18 UTC] The WC_Cart::get_cart_url function is deprecated since version 2.5. Replace with wc_get_cart_url.
+[21-Oct-2019 15:03:18 UTC] The WC_Cart::get_checkout_url function is deprecated since version 2.5. Replace with wc_get_checkout_url.
+[21-Oct-2019 15:03:53 UTC] Array
+(
+    [free_shipping:10] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => free_shipping:10
+                    [method_id] => free_shipping
+                    [instance_id] => 10
+                    [label] => Recoger en tienda (Cra 16#85-15 oficina 301)
+                    [cost] => 0
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 1
+                )
+
+        )
+
+    [flat_rate:9] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => flat_rate:9
+                    [method_id] => flat_rate
+                    [instance_id] => 9
+                    [label] => Envío al colegio
+                    [cost] => 0
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 1
+                )
+
+        )
+
+    [filters_by_cities_shipping_method] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => filters_by_cities_shipping_method
+                    [method_id] => filters_by_cities_shipping_method
+                    [instance_id] => 7
+                    [label] => Envío en Bógota
+                    [cost] => 7000
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 1
+                )
+
+        )
+
+    [flat_rate:8] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => flat_rate:8
+                    [method_id] => flat_rate
+                    [instance_id] => 8
+                    [label] => Nacional
+                    [cost] => 12000
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 1
+                )
+
+        )
+
+)
+
+[21-Oct-2019 15:03:54 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:03:54 UTC] PHP Notice:  WC_Product::get_price_excluding_tax ha quedado <strong>obsoleto</strong> desde la versión 3.0. Utiliza wc_get_price_excluding_tax en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:03:54 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:03:54 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:03:54 UTC] PHP Notice:  WC_Cart::get_checkout_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_checkout_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:03:54 UTC] PHP Notice:  WC_Cart::get_item_data ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_formatted_cart_item_data en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:03:54 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:03:57 UTC] add_to_cart_fragments is deprecated since version 3.0.0! Use woocommerce_add_to_cart_fragments instead.
+[21-Oct-2019 15:03:57 UTC] The WC_Cart::get_cart_url function is deprecated since version 2.5. Replace with wc_get_cart_url.
+[21-Oct-2019 15:03:57 UTC] The WC_Product::get_price_excluding_tax function is deprecated since version 3.0. Replace with wc_get_price_excluding_tax.
+[21-Oct-2019 15:03:57 UTC] The WC_Cart::get_remove_url function is deprecated since version 3.3. Replace with wc_get_cart_remove_url.
+[21-Oct-2019 15:03:57 UTC] The WC_Cart::get_cart_url function is deprecated since version 2.5. Replace with wc_get_cart_url.
+[21-Oct-2019 15:03:57 UTC] The WC_Cart::get_checkout_url function is deprecated since version 2.5. Replace with wc_get_checkout_url.
+[21-Oct-2019 15:04:01 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:04:01 UTC] PHP Notice:  WC_Product::get_price_excluding_tax ha quedado <strong>obsoleto</strong> desde la versión 3.0. Utiliza wc_get_price_excluding_tax en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:04:01 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:04:01 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:04:01 UTC] PHP Notice:  WC_Cart::get_checkout_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_checkout_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:04:01 UTC] PHP Notice:  Undefined index: order in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-content/plugins/woocommerce/includes/class-wc-checkout.php on line 198
+[21-Oct-2019 15:04:01 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-content/plugins/woocommerce/templates/checkout/form-shipping.php on line 68
+[21-Oct-2019 15:04:42 UTC] Array
+(
+    [free_shipping:10] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => free_shipping:10
+                    [method_id] => free_shipping
+                    [instance_id] => 10
+                    [label] => Recoger en tienda (Cra 16#85-15 oficina 301)
+                    [cost] => 0
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 1
+                )
+
+        )
+
+    [flat_rate:9] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => flat_rate:9
+                    [method_id] => flat_rate
+                    [instance_id] => 9
+                    [label] => Envío al colegio
+                    [cost] => 0
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 1
+                )
+
+        )
+
+    [filters_by_cities_shipping_method] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => filters_by_cities_shipping_method
+                    [method_id] => filters_by_cities_shipping_method
+                    [instance_id] => 7
+                    [label] => Envío en Bógota
+                    [cost] => 7000
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 1
+                )
+
+        )
+
+    [flat_rate:8] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => flat_rate:8
+                    [method_id] => flat_rate
+                    [instance_id] => 8
+                    [label] => Nacional
+                    [cost] => 12000
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 1
+                )
+
+        )
+
+)
+
+[21-Oct-2019 15:04:44 UTC] Array
+(
+    [free_shipping:10] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => free_shipping:10
+                    [method_id] => free_shipping
+                    [instance_id] => 10
+                    [label] => Recoger en tienda (Cra 16#85-15 oficina 301)
+                    [cost] => 0
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 1
+                )
+
+        )
+
+    [flat_rate:9] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => flat_rate:9
+                    [method_id] => flat_rate
+                    [instance_id] => 9
+                    [label] => Envío al colegio
+                    [cost] => 0
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 1
+                )
+
+        )
+
+    [filters_by_cities_shipping_method] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => filters_by_cities_shipping_method
+                    [method_id] => filters_by_cities_shipping_method
+                    [instance_id] => 7
+                    [label] => Envío en Bógota
+                    [cost] => 7000
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 1
+                )
+
+        )
+
+    [flat_rate:8] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => flat_rate:8
+                    [method_id] => flat_rate
+                    [instance_id] => 8
+                    [label] => Nacional
+                    [cost] => 12000
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 1
+                )
+
+        )
+
+)
+
+[21-Oct-2019 15:04:45 UTC] Array
+(
+    [free_shipping:10] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => free_shipping:10
+                    [method_id] => free_shipping
+                    [instance_id] => 10
+                    [label] => Recoger en tienda (Cra 16#85-15 oficina 301)
+                    [cost] => 0
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 1
+                )
+
+        )
+
+    [flat_rate:9] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => flat_rate:9
+                    [method_id] => flat_rate
+                    [instance_id] => 9
+                    [label] => Envío al colegio
+                    [cost] => 0
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 1
+                )
+
+        )
+
+    [filters_by_cities_shipping_method] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => filters_by_cities_shipping_method
+                    [method_id] => filters_by_cities_shipping_method
+                    [instance_id] => 7
+                    [label] => Envío en Bógota
+                    [cost] => 7000
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 1
+                )
+
+        )
+
+    [flat_rate:8] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => flat_rate:8
+                    [method_id] => flat_rate
+                    [instance_id] => 8
+                    [label] => Nacional
+                    [cost] => 12000
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 1
+                )
+
+        )
+
+)
+
+[21-Oct-2019 15:04:49 UTC] PHP Notice: A feed could not be found at http://wordpress.org/plugins/rss/browse/popular/. A feed with an invalid mime type may fall victim to this error, or SimplePie was unable to auto-discover it.. Use force_feed() if you are certain this URL is a real feed. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/class-simplepie.php on line 1555
+[21-Oct-2019 15:04:55 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:04:55 UTC] PHP Notice:  WC_Product::get_price_excluding_tax ha quedado <strong>obsoleto</strong> desde la versión 3.0. Utiliza wc_get_price_excluding_tax en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:04:55 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:04:55 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:04:55 UTC] PHP Notice:  WC_Cart::get_checkout_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_checkout_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:04:58 UTC] add_to_cart_fragments is deprecated since version 3.0.0! Use woocommerce_add_to_cart_fragments instead.
+[21-Oct-2019 15:04:58 UTC] The WC_Cart::get_cart_url function is deprecated since version 2.5. Replace with wc_get_cart_url.
+[21-Oct-2019 15:04:58 UTC] The WC_Product::get_price_excluding_tax function is deprecated since version 3.0. Replace with wc_get_price_excluding_tax.
+[21-Oct-2019 15:04:58 UTC] The WC_Cart::get_remove_url function is deprecated since version 3.3. Replace with wc_get_cart_remove_url.
+[21-Oct-2019 15:04:58 UTC] The WC_Cart::get_cart_url function is deprecated since version 2.5. Replace with wc_get_cart_url.
+[21-Oct-2019 15:04:58 UTC] The WC_Cart::get_checkout_url function is deprecated since version 2.5. Replace with wc_get_checkout_url.
+[21-Oct-2019 15:05:01 UTC] Array
+(
+    [free_shipping:10] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => free_shipping:10
+                    [method_id] => free_shipping
+                    [instance_id] => 10
+                    [label] => Recoger en tienda (Cra 16#85-15 oficina 301)
+                    [cost] => 0
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 1, ¡De otra manera!: Fábulas sobre acuerdos en Colombia (Lista escolar) &times; 1
+                )
+
+        )
+
+    [flat_rate:9] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => flat_rate:9
+                    [method_id] => flat_rate
+                    [instance_id] => 9
+                    [label] => Envío al colegio
+                    [cost] => 0
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 1, ¡De otra manera!: Fábulas sobre acuerdos en Colombia (Lista escolar) &times; 1
+                )
+
+        )
+
+    [filters_by_cities_shipping_method] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => filters_by_cities_shipping_method
+                    [method_id] => filters_by_cities_shipping_method
+                    [instance_id] => 7
+                    [label] => Envío en Bógota
+                    [cost] => 7000
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 1, ¡De otra manera!: Fábulas sobre acuerdos en Colombia (Lista escolar) &times; 1
+                )
+
+        )
+
+    [flat_rate:8] => WC_Shipping_Rate Object
+        (
+            [data:protected] => Array
+                (
+                    [id] => flat_rate:8
+                    [method_id] => flat_rate
+                    [instance_id] => 8
+                    [label] => Nacional
+                    [cost] => 12000
+                    [taxes] => Array
+                        (
+                        )
+
+                )
+
+            [meta_data:protected] => Array
+                (
+                    [Artículos] => ¡De otra manera!: Fábulas sobre acuerdos en Colombia &times; 1, ¡De otra manera!: Fábulas sobre acuerdos en Colombia (Lista escolar) &times; 1
+                )
+
+        )
+
+)
+
+[21-Oct-2019 15:05:01 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:05:01 UTC] PHP Notice:  WC_Product::get_price_excluding_tax ha quedado <strong>obsoleto</strong> desde la versión 3.0. Utiliza wc_get_price_excluding_tax en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:05:01 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:05:01 UTC] PHP Notice:  WC_Product::get_price_excluding_tax ha quedado <strong>obsoleto</strong> desde la versión 3.0. Utiliza wc_get_price_excluding_tax en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:05:01 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:05:01 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:05:01 UTC] PHP Notice:  WC_Cart::get_checkout_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_checkout_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:05:04 UTC] add_to_cart_fragments is deprecated since version 3.0.0! Use woocommerce_add_to_cart_fragments instead.
+[21-Oct-2019 15:05:04 UTC] The WC_Cart::get_cart_url function is deprecated since version 2.5. Replace with wc_get_cart_url.
+[21-Oct-2019 15:05:04 UTC] The WC_Product::get_price_excluding_tax function is deprecated since version 3.0. Replace with wc_get_price_excluding_tax.
+[21-Oct-2019 15:05:04 UTC] The WC_Cart::get_remove_url function is deprecated since version 3.3. Replace with wc_get_cart_remove_url.
+[21-Oct-2019 15:05:04 UTC] The WC_Product::get_price_excluding_tax function is deprecated since version 3.0. Replace with wc_get_price_excluding_tax.
+[21-Oct-2019 15:05:04 UTC] The WC_Cart::get_remove_url function is deprecated since version 3.3. Replace with wc_get_cart_remove_url.
+[21-Oct-2019 15:05:04 UTC] The WC_Cart::get_cart_url function is deprecated since version 2.5. Replace with wc_get_cart_url.
+[21-Oct-2019 15:05:04 UTC] The WC_Cart::get_checkout_url function is deprecated since version 2.5. Replace with wc_get_checkout_url.
+[21-Oct-2019 15:05:07 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:05:07 UTC] PHP Notice:  WC_Product::get_price_excluding_tax ha quedado <strong>obsoleto</strong> desde la versión 3.0. Utiliza wc_get_price_excluding_tax en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:05:07 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:05:07 UTC] PHP Notice:  WC_Product::get_price_excluding_tax ha quedado <strong>obsoleto</strong> desde la versión 3.0. Utiliza wc_get_price_excluding_tax en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:05:07 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:05:07 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:05:07 UTC] PHP Notice:  WC_Cart::get_checkout_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_checkout_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:05:07 UTC] PHP Notice:  Undefined index: order in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-content/plugins/woocommerce/includes/class-wc-checkout.php on line 198
+[21-Oct-2019 15:05:07 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-content/plugins/woocommerce/templates/checkout/form-shipping.php on line 68
+[21-Oct-2019 15:05:39 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:07:49 UTC] add_to_cart_fragments is deprecated since version 3.0.0! Use woocommerce_add_to_cart_fragments instead.
+[21-Oct-2019 15:07:49 UTC] The WC_Cart::get_cart_url function is deprecated since version 2.5. Replace with wc_get_cart_url.
+[21-Oct-2019 15:08:26 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:26 UTC] PHP Notice:  WC_Product::get_price_excluding_tax ha quedado <strong>obsoleto</strong> desde la versión 3.0. Utiliza wc_get_price_excluding_tax en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:26 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:26 UTC] PHP Notice:  WC_Product::get_price_excluding_tax ha quedado <strong>obsoleto</strong> desde la versión 3.0. Utiliza wc_get_price_excluding_tax en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:26 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:26 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:26 UTC] PHP Notice:  WC_Cart::get_checkout_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_checkout_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:26 UTC] PHP Notice:  Undefined index: order in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-content/plugins/woocommerce/includes/class-wc-checkout.php on line 198
+[21-Oct-2019 15:08:26 UTC] 
+[21-Oct-2019 15:08:26 UTC] PHP Notice:  Undefined index: order in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-content/plugins/woocommerce/includes/class-wc-checkout.php on line 198
+[21-Oct-2019 15:08:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-content/plugins/woocommerce/templates/checkout/form-shipping.php on line 69
+[21-Oct-2019 15:08:38 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:38 UTC] PHP Notice:  WC_Product::get_price_excluding_tax ha quedado <strong>obsoleto</strong> desde la versión 3.0. Utiliza wc_get_price_excluding_tax en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:38 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:38 UTC] PHP Notice:  WC_Product::get_price_excluding_tax ha quedado <strong>obsoleto</strong> desde la versión 3.0. Utiliza wc_get_price_excluding_tax en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:38 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:38 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:38 UTC] PHP Notice:  WC_Cart::get_checkout_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_checkout_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:38 UTC] PHP Notice:  Undefined index: order in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-content/plugins/woocommerce/includes/class-wc-checkout.php on line 198
+[21-Oct-2019 15:08:38 UTC] 
+[21-Oct-2019 15:08:38 UTC] PHP Notice:  Undefined index: order in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-content/plugins/woocommerce/includes/class-wc-checkout.php on line 198
+[21-Oct-2019 15:08:38 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-content/plugins/woocommerce/templates/checkout/form-shipping.php on line 69
+[21-Oct-2019 15:08:46 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:46 UTC] PHP Notice:  WC_Product::get_price_excluding_tax ha quedado <strong>obsoleto</strong> desde la versión 3.0. Utiliza wc_get_price_excluding_tax en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:46 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:46 UTC] PHP Notice:  WC_Product::get_price_excluding_tax ha quedado <strong>obsoleto</strong> desde la versión 3.0. Utiliza wc_get_price_excluding_tax en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:46 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:46 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:46 UTC] PHP Notice:  WC_Cart::get_checkout_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_checkout_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:46 UTC] PHP Notice:  WC_Cart::get_item_data ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_formatted_cart_item_data en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:46 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:46 UTC] PHP Notice:  WC_Cart::get_item_data ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_formatted_cart_item_data en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:46 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:54 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:54 UTC] PHP Notice:  WC_Product::get_price_excluding_tax ha quedado <strong>obsoleto</strong> desde la versión 3.0. Utiliza wc_get_price_excluding_tax en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:54 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:54 UTC] PHP Notice:  WC_Product::get_price_excluding_tax ha quedado <strong>obsoleto</strong> desde la versión 3.0. Utiliza wc_get_price_excluding_tax en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:54 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:54 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:54 UTC] PHP Notice:  WC_Cart::get_checkout_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_checkout_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:54 UTC] PHP Notice:  WC_Cart::get_item_data ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_formatted_cart_item_data en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:54 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:54 UTC] PHP Notice:  WC_Cart::get_item_data ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_formatted_cart_item_data en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:54 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:57 UTC] add_to_cart_fragments is deprecated since version 3.0.0! Use woocommerce_add_to_cart_fragments instead.
+[21-Oct-2019 15:08:57 UTC] The WC_Cart::get_cart_url function is deprecated since version 2.5. Replace with wc_get_cart_url.
+[21-Oct-2019 15:08:57 UTC] The WC_Product::get_price_excluding_tax function is deprecated since version 3.0. Replace with wc_get_price_excluding_tax.
+[21-Oct-2019 15:08:57 UTC] The WC_Cart::get_remove_url function is deprecated since version 3.3. Replace with wc_get_cart_remove_url.
+[21-Oct-2019 15:08:57 UTC] The WC_Product::get_price_excluding_tax function is deprecated since version 3.0. Replace with wc_get_price_excluding_tax.
+[21-Oct-2019 15:08:57 UTC] The WC_Cart::get_remove_url function is deprecated since version 3.3. Replace with wc_get_cart_remove_url.
+[21-Oct-2019 15:08:57 UTC] The WC_Cart::get_cart_url function is deprecated since version 2.5. Replace with wc_get_cart_url.
+[21-Oct-2019 15:08:57 UTC] The WC_Cart::get_checkout_url function is deprecated since version 2.5. Replace with wc_get_checkout_url.
+[21-Oct-2019 15:08:59 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:59 UTC] PHP Notice:  WC_Product::get_price_excluding_tax ha quedado <strong>obsoleto</strong> desde la versión 3.0. Utiliza wc_get_price_excluding_tax en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:59 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:59 UTC] PHP Notice:  WC_Product::get_price_excluding_tax ha quedado <strong>obsoleto</strong> desde la versión 3.0. Utiliza wc_get_price_excluding_tax en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:59 UTC] PHP Notice:  WC_Cart::get_remove_url ha quedado <strong>obsoleto</strong> desde la versión 3.3. Utiliza wc_get_cart_remove_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:59 UTC] PHP Notice:  WC_Cart::get_cart_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_cart_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:08:59 UTC] PHP Notice:  WC_Cart::get_checkout_url ha quedado <strong>obsoleto</strong> desde la versión 2.5. Utiliza wc_get_checkout_url en su lugar. in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-includes/functions.php on line 3884
+[21-Oct-2019 15:09:00 UTC] PHP Notice:  Undefined index: order in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-content/plugins/woocommerce/includes/class-wc-checkout.php on line 198
+[21-Oct-2019 15:09:00 UTC] 
+[21-Oct-2019 15:09:00 UTC] PHP Notice:  Undefined index: order in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-content/plugins/woocommerce/includes/class-wc-checkout.php on line 198
+[21-Oct-2019 15:09:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/105881-80224.cloudwaysapps.com/ydpubmcuhg/public_html/wp-content/plugins/woocommerce/templates/checkout/form-shipping.php on line 69
